@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 		$amount = $_POST['apx_amount'];
 		$order_id = time();
 		$invoiceDate = date("Y/m/d H:i:s");
-        $redirect = urlencode("http://".$_SERVER["SERVER_NAME"]."/nextpay/getresult.php?dates=".$invoiceDate);
+        $redirect = "http://".$_SERVER["SERVER_NAME"]."/nextpay/getresult.php?dates=".$invoiceDate;
 		$_SESSION['invodat'] = $invoiceDate;
 		$_SESSION['invoprice'] = $_POST['apx_amount']/10;
 		$_SESSION['apuser'] = $_POST['apx_user'];
